@@ -60,9 +60,31 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  /**
+   * Runtime lint (having ESLint running after a file has been saved).
+   */
+  typescript: {
+    typeCheck: {
+      eslint: {
+        files: './**/*.{ts,js,vue}'
+      }
+    }
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    /**
+     * Disabling the default error overlay that appears when there is a lint issue, 
+     * as it can be really annoying while developing the app. 
+     * Instead, it's better and more practical to rely on CI tools or git hooks to make sure no linting errors leak to production, 
+     * and the errors will still appear on the console and in your terminal.
+     */
+    hotMiddleware: {
+      client: {
+        overlay: false
+      }
+    },
+  },
 }
