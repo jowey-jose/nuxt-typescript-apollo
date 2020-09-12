@@ -8,14 +8,21 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "generate-types": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.3",
     "@nuxtjs/axios": "^5.12.0",
+    "apollo-cache-inmemory": "^1.6.6",
+    "graphql": "^15.3.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.17.8",
+    "@graphql-codegen/typescript": "^1.17.9",
+    "@graphql-codegen/typescript-graphql-files-modules": "^1.17.8",
+    "@graphql-codegen/typescript-operations": "^1.17.8",
     "@nuxt/types": "^2.14.5",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",

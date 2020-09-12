@@ -1,0 +1,13 @@
+    overwrite: true
+    schema:
+      - https://graphql.datocms.com:
+          headers:
+            Authorization: a104915aa964ac2d9576efce40faaf
+    generates:
+      types/graphql.d.ts:
+        plugins:
+          - typescript-graphql-files-modules
+      types/types.ts:
+        plugins:
+          - typescript
+          - typescript-operations
