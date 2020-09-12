@@ -3,6 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">nuxt-apollo-typescript-example</h1>
+      <h1 class="subtitle">nuxt CMS Example.</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
