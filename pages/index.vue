@@ -3,7 +3,11 @@
     <div>
       <Logo />
       <h1 class="title">nuxt-apollo-typescript-example</h1>
-      <h1 class="subtitle">nuxt CMS Example.</h1>
+      <h1 class="subtitle">
+        <li v-for="(post, index) in allTests" :key="index">
+          {{ post.title }}
+        </li>
+      </h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -26,8 +30,22 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+import gql from 'graphql-tag'
+
+@Component({
+  apollo: {
+    allTests: gql`
+      {
+        allTests {
+          title
+        }
+      }
+    `,
+  },
+})
+export default class IndexPage extends Vue {}
 </script>
 
 <style>
