@@ -1,6 +1,6 @@
 export default function () {
   return {
     httpEndpoint: 'https://graphql.datocms.com',
-    getAuth: () => 'a104915aa964ac2d9576efce40faaf', // Bearer is added by default.
+    getAuth: () => 'be46ba7728100ad68ca6373bb41c2a', // Bearer is added by default.
   }
 }
